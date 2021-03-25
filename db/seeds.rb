@@ -23,9 +23,9 @@ e1 = Event.create!(name: 'EDC', date: 'May 16, 2021', description: 'sweaty peopl
 e2 = Event.create!(name: 'Tomorrowland', date: 'July 25, 2020', description: 'european mystical forest shit', price: 800,  user_id: u2.id, venue_id: v2.id)
 e3 = Event.create!(name: 'Lost Lands', date: 'September 24, 2021', description: 'a lot of sweaty people and bass', price: 150,  user_id: u3.id, venue_id: v3.id)
 
-t1 = Ticket.create!(user_id: u2.id, event_id: e2.id)
-t2 = Ticket.create!(user_id: u2.id, event_id: e2.id)
-t3 = Ticket.create!(user_id: u3.id, event_id: e3.id)
+t1 = Ticket.create!(user_id: u1.id, event_id: e1.id)
+t2 = Ticket.create!(user_id: u2.id, event_id: e1.id)
+t3 = Ticket.create!(user_id: u3.id, event_id: e1.id)
 
 
 
