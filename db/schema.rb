@@ -20,10 +20,11 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "date"
     t.text "description"
     t.float "price"
-    t.string "artist"
+    t.bigint "user_id", null: false
     t.bigint "venue_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
     t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 4) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "events", "users"
   add_foreign_key "events", "venues"
   add_foreign_key "tickets", "events"
   add_foreign_key "tickets", "users"
