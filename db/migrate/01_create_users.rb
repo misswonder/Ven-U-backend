@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.text :bio
       t.boolean :artist
 
+
       t.timestamps
     end
   end
