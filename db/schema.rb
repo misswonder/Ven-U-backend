@@ -17,9 +17,15 @@ ActiveRecord::Schema.define(version: 4) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.string "date"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "summary"
     t.text "description"
     t.float "price"
+    t.text "status"
+    t.integer "age_restriction"
+    t.string "presented_by"
+    t.string "image"
     t.bigint "user_id", null: false
     t.bigint "venue_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -38,6 +44,8 @@ ActiveRecord::Schema.define(version: 4) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.string "name"
     t.integer "age"
     t.string "email"
