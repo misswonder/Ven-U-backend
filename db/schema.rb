@@ -59,7 +59,8 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "address"
     t.string "name"
     t.string "image"
-    t.string "description"
+    t.text "description"
+    t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
