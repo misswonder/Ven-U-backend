@@ -27,4 +27,8 @@ class UsersController < ApplicationController
         params.require(:user).permit(:name, :username, :password, :email, :age, :artist, :bio)
     end
 
+    def token_authenticate
+    end 
+
+
 end
