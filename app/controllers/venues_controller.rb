@@ -7,6 +7,7 @@ class VenuesController < ApplicationController
 
     def create
         venue = Venue.create!({ 
+            name: permitted_params['name']
             address: permitted_params['address']
         })
         render json: venue
@@ -18,7 +19,7 @@ class VenuesController < ApplicationController
     end 
 
     def permitted_params
-        params.require(:venue).permit(:address)
+        params.require(:venue).permit(:name, :address)
     end
 
 end
