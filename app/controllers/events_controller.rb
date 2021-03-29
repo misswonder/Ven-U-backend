@@ -19,8 +19,8 @@ class EventsController < ApplicationController
     end
 
     def index 
-        events = Event.where(user_id: params['user_id'], event_id: params['event_id'])
-        render json: tickets
+        events = Event.all
+        render json: events
     end 
 
     def show
