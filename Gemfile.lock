@@ -89,14 +89,8 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
-<<<<<<< HEAD
     nokogiri (1.11.2)
       mini_portile2 (~> 2.5.0)
-=======
-    nokogiri (1.11.2-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.11.2-x86_64-linux)
->>>>>>> a87d514af40e6af0bd165dc036d566ce28d33dfd
       racc (~> 1.4)
     pg (1.2.3)
     puma (5.2.2)
@@ -154,12 +148,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-<<<<<<< HEAD
   ruby
-=======
-  x86_64-darwin-20
-  x86_64-linux
->>>>>>> a87d514af40e6af0bd165dc036d566ce28d33dfd
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
