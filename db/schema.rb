@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 4) do
   create_table "venues", force: :cascade do |t|
     t.string "address"
     t.string "name"
+    t.string "image"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
