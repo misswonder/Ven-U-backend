@@ -1,4 +1,4 @@
-class Api::V1::AuthController < ApplicationController
+class AuthController < ApplicationController
     
         before_action :authorized, only: [:auto_login]
       
