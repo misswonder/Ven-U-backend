@@ -6,6 +6,7 @@ class CreateVenues < ActiveRecord::Migration[6.1]
       t.string :image
       t.text :description
       t.float :price
+      t.string :availability
 
       t.timestamps
     end
