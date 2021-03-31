@@ -11,7 +11,7 @@ Event.destroy_all
 Venue.destroy_all
 User.destroy_all
 
-u1 = User.create!(name: 'Yvonne', username: "yvonne", password: "123", age: 21, email: 'HungLikeMcJagger@ChristianMingle.com', bio: 'Can cook the best bowl of cereal', artist: true)
+u1 = User.create!(name: 'Yvonne', username: "yvonne", password: "1234567890", age: 21, email: 'HungLikeMcJagger@ChristianMingle.com', bio: 'Can cook the best bowl of cereal', artist: true)
 u2 = User.create!(name: 'Nick', username: "nick", password: "456", age: 30, email: 'sauteedshroms69@hotmail.com', bio: 'only lemons', artist: false)
 u3 = User.create!(name: 'Abraham', username: "abraham", password: "789", age: 25, email: 'FreshOutTheOven@gmail.com', bio: 'Jalapeno Poppers and Gatorade', artist: true)
 u4 = User.create!(name: 'Griffin', username: "griffin", password: "301", age: 23, email: 'dagriffinater@gmail.com', bio: 'pringles and rice', artist: false)
