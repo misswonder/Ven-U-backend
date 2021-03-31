@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :authorized, only: [:index]
 
     def index 
         users = User.all
@@ -26,5 +27,13 @@ class UsersController < ApplicationController
     def permitted_params
         params.require(:user).permit(:name, :username, :password, :email, :age, :artist, :bio)
     end
+
+    def token_authenticate
+        token = request.headers["Authorization"]
+        decoded_token = decode(token)
+        user = User.find(decoded_token[0]['user_id'])
+        render json:user 
+    end 
+
 
 end
