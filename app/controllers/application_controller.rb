@@ -30,6 +30,7 @@ class ApplicationController < ActionController::API
   end
 
   def logged_in?
+    # true
     !!logged_in_user
   end
 
