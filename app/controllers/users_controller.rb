@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:index]
+    skip_before_action :authorized, only: [:create]
 
     def index 
         users = User.all
@@ -30,7 +30,6 @@ class UsersController < ApplicationController
 
     def token_authenticate
         token = request.headers["Authorization"]
-        decoded_token = decode(token)
         user = User.find(decoded_token[0]['user_id'])
         render json:user 
     end 
